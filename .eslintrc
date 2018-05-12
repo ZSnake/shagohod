@@ -1,0 +1,37 @@
+{
+  "root": true,
+  "extends": [
+    "eslint-config-airbnb",
+    "plugin:react/recommended",
+    "plugin:flowtype/recommended",
+    "prettier/react",
+    "prettier/standard"
+  ],
+  "plugins": [
+    "flowtype"
+  ],
+  "settings": {
+    "ecmascript": 6
+  },
+  "ecmaFeatures": {
+    "jsx": true,
+    "modules": true,
+    "destructuring": true,
+    "classes": true,
+    "forOf": true,
+    "blockBindings": true,
+    "arrowFunctions": true
+  },
+  "rules": {
+    "react/jsx-filename-extension": 0
+  },
+  "env": {
+    "browser": true
+  },
+  "globals": {
+    "expect": true,
+    "describe": true,
+    "it": true,
+    "jest": true
+  }
+}
