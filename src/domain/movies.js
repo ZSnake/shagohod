@@ -25,6 +25,7 @@ const reducer = (state: State = initialState, action: Object) => {
         loading: true,
       };
     case GET_MOVIES_SUCCESS:
+      console.log(action.data);
       return {
         ...state,
         loading: false,
@@ -44,10 +45,23 @@ const reducer = (state: State = initialState, action: Object) => {
 export const fetchAllMovies = (dispatch: Function) =>
   () => {
     dispatch({ type: GET_MOVIES });
-    client.get(`${baseUrl}/movies`)
+    client.get(`${baseUrl}/movies?pageSize=50&pageNumber=1`)
       .then(response => response.json())
       .then((data) => {
-        console.log(data);
+        dispatch({ type: GET_MOVIES_SUCCESS, data });
+      })
+      .catch((error) => {
+        console.log(error);
+        dispatch({ type: GET_MOVIES_FAILURE, error });
+      });
+  };
+
+export const fetchFilteredMovies = (dispatch: Function) =>
+  (filter: string, searchTerm: string) => {
+    dispatch({ type: GET_MOVIES });
+    client.get(`${baseUrl}/movies?pageSize=50&pageNumber=1&filter=${filter}&filterValue=${searchTerm}`)
+      .then(response => response.json())
+      .then((data) => {
         dispatch({ type: GET_MOVIES_SUCCESS, data });
       })
       .catch((error) => {
