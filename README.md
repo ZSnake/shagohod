@@ -11,7 +11,7 @@ other fields can be implemented easily). All API calls are made in the domain mo
 then the data fetched is sorted using selectors and passed in to the connected container component which then renders
 presentational components with all the information passed in.
 
-## Technologies used
+## Technologies used (between 1-1.5 years of xp)
 - React 16 (create-react-app)
 - react-router
 - redux
