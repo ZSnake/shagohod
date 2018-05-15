@@ -25,6 +25,7 @@
     "whatwg-fetch": "^2.0.4"
   },
   "scripts": {
+    "pre-start": "yarn build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
