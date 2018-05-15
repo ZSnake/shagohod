@@ -3,10 +3,11 @@ import * as React from 'react';
 import { connect } from 'react-redux';
 import { fetchAllMovies } from '../../domain/movies';
 import { getMovies } from '../../selectors/movies';
+import type { Movie } from '../../types/movies';
 import GoogleMaps from '../../components/GoogleMaps';
 
 type Props = {
-  movies: Object[],
+  movies: Movie[],
   fetchAllMovies: Function,
 };
 

@@ -4,11 +4,12 @@ import * as React from 'react';
 import { compose, withProps } from 'recompose';
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from 'react-google-maps';
 import { Modal } from 'react-bootstrap';
+import type { Movie } from '../../types/movies';
 import { mapUrl } from '../../config/mapConfig';
 import defaultMapCenter from '../../config/defaultMapCenter';
 
 type GoogleMapsProps = {
-  movies: Object[],
+  movies: Movie[],
   show: boolean,
   onModalHide: Function,
   onModalShow: Function,

@@ -1,1 +1,1 @@
-export default '//localhost:8000';
+export default process.env.BACKEND_URL || '//localhost:8000';

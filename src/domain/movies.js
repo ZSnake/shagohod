@@ -1,12 +1,13 @@
 // @flow
 import actionTypeGenerator from '../utils/actionTypeGenerator';
+import type { Movie } from '../types/movies';
 import client from '../utils/client';
 import baseUrl from '../config/api';
 
 export const [GET_MOVIES, GET_MOVIES_SUCCESS, GET_MOVIES_FAILURE] = actionTypeGenerator('GET_MOVIES');
 
-type State = {
-  movies: Object[],
+export type State = {
+  movies: Movie[],
   loading: boolean,
   error: string,
 };
