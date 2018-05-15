@@ -1,4 +1,4 @@
-##Moviewer
+# Moviewer
 ## To run
 - Clone repo
 - yarn start
@@ -21,8 +21,12 @@ presentational components with all the information passed in.
 
 ## Trade-offs
 Mainly due to time constrains some things I wanted to implement were left out.
-- More thorough testing (missing component testing)
-- Display movies information in tooltips in the map (movies are being printed in console for reference)
-- Pagination implemented correctly (to avoid pulling the 1000 results the backend could get)
-- Loading spinner
-- Better style structure (right now just using a single CSS file)
+- More thorough testing (missing component testing).
+- Display movies information in tooltips in the map (movies are being printed in console for reference).
+- Pagination implemented correctly (to avoid pulling the 1000 results the backend could get).
+- Better UX, more feedback to the user (loading spinner, a more responsive dropdown, etc).
+- Better style structure (right now just using a single CSS file).
+
+## Urls
+- Frontend: https://shagohod.herokuapp.com/
+- Backend: https://zekeapi.herokuapp.com/
